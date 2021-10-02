@@ -1,4 +1,4 @@
-AWSTemplateFormatVersion: '2010-09-09'
+AWSTemplateFormatVersion: "2010-09-09"
 Transform: AWS::Serverless-2016-10-31
 Description: >
   hello
@@ -39,3 +39,16 @@ Outputs:
   HelloWorldFunctionIamRole:
     Description: "Implicit IAM Role created for Hello World function"
     Value: !GetAtt HelloWorldFunctionRole.Arn
+
+Metadata:
+  AWS::ServerlessRepo::Application:
+    Name: my-app
+    Description: hello world
+    Author: user1
+    SpdxLicenseId: Apache-2.0
+    LicenseUrl: LICENSE.txt
+    ReadmeUrl: README.md
+    Labels: ["tests"]
+    HomePageUrl: https://github.com/dactrungnguyen/hello
+    SemanticVersion: 0.0.1
+    SourceCodeUrl: https://github.com/dactrungnguyen/hello
